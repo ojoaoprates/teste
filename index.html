@@ -6,7 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    ola Mundo
-    <div>olá</div>
+    <button id="btn">Incrementar</button>
+    <div id="container"></div>
+    <script scr="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+    <script>
+        let contador = 0;
+
+        $("#btn").click(incrementar);
+
+        function incrementar(){
+            contador++;
+            let p =$("<p></p>");
+            p.text("Adicionando texto dinâmico: "+ contador);
+            $("#container").append(p);
+        }
+    </script>
+    
 </body>
 </html>
